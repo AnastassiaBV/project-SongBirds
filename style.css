@@ -1,10 +1,79 @@
-<style>
-h1 {
-    color: white;
-    background-color: rgb(66, 111, 66);
-    width: 50%;
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: relative;
+}
+
+.top-panel h1 {
+    color: black;
+    font-size: 40px;
+    margin: 0;
+    /* background-color: rgb(66, 111, 66); */
+    /* width: 100%; */
     text-align: center;
     padding: 5px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Snell Roundhand, cursive;
+    position: relative;
+    right: 600px;
 }
-</style>
+.center-panel {
+background-color: wheat;
+width: 100%;
+}
+.round {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+.top-panel {
+    width: 100%;
+    background-color: burlywood;
+}
+/* .center-panel {
+    width: 100%;
+    color: grey;
+} */
+
+/* .bottom-panel svg {
+
+   width: 70px;
+   grid-template: 40px; /*       */
+    
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+}
+.footer svg{
+    width: 70px;
+    height: 40px;
+}
+p {
+    font-size: 25px;
+    color: grey;
+    font-family: sans-serif;
+    position: relative;
+    left: 250px;
+    bottom: 150px;
+}
+button {
+    width: 250px;
+    height: 65px;
+    background-color: peachpuff;
+    position: relative;
+    left: 730px;
+    font-size: 25px;
+    
+    font-family: ;
+
+}
