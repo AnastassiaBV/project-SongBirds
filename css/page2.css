@@ -1,0 +1,159 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #EECDA3;
+    background: -webkit-linear-gradient(to right, #EF629F, #EECDA3);
+    background: linear-gradient(to right, #EF629F, #EECDA3);
+
+    font-family: "Century Gothic", sans-serif;
+    line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    /* background-color: burlywood; */
+    margin: 20px 0 40px 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 0 20px;
+}
+
+.top-panel {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.top-panel h1 {
+    color: black;
+    font-size: 35px;
+    letter-spacing: -4px;
+    font-weight: 600;
+    font-family: 'Comfortaa', cursive;
+    /* font-family: 'Montserrat', sans-serif;
+    font-weight: 500; */
+}
+
+.top-panel ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.top-panel ul a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #000;
+}
+
+.top-panel ul a:hover {
+    text-decoration: underline;
+}
+
+.center-panel {
+    /* background-color: wheat; */
+    width: 100%;
+}
+
+
+.birds_quiz {
+    width: 100%;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.01) 0px 10px 34px 0px inset,
+        rgba(0, 0, 0, 0.05) 0px 3px 26px 0px inset,
+        rgba(0, 0, 0, 0.04) 0px 10px 40px 0px inset,
+        rgba(0, 0, 0, 0.2) 0px 0px 1px,
+        rgba(0, 0, 0, 0.01) 0px 4px 2px,
+        rgba(0, 0, 0, 0) 0px -2px 0px,
+        rgba(0, 0, 0, 0) 0px 0px 0px,
+        rgba(0, 0, 0, 0.09) 0px 8px 16px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.birds_quiz_content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.birds_quiz_option,
+.birds_quiz_description {
+    width: 48%;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.01) 0px 10px 34px 0px inset,
+        rgba(0, 0, 0, 0.05) 0px 3px 26px 0px inset,
+        rgba(0, 0, 0, 0.04) 0px 10px 40px 0px inset,
+        rgba(0, 0, 0, 0.2) 0px 0px 1px,
+        rgba(0, 0, 0, 0.01) 0px 4px 2px,
+        rgba(0, 0, 0, 0) 0px -2px 0px,
+        rgba(0, 0, 0, 0) 0px 0px 0px,
+        rgba(0, 0, 0, 0.09) 0px 8px 16px;
+    border-radius: 4px;
+}
+.birds_quiz_nextLevel{
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.01) 0px 10px 34px 0px inset,
+    rgba(0, 0, 0, 0.05) 0px 3px 26px 0px inset,
+    rgba(0, 0, 0, 0.04) 0px 10px 40px 0px inset,
+    rgba(0, 0, 0, 0.2) 0px 0px 1px,
+    rgba(0, 0, 0, 0.01) 0px 4px 2px,
+    rgba(0, 0, 0, 0) 0px -2px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px,
+    rgba(0, 0, 0, 0.09) 0px 8px 16px;
+border-radius: 4px;
+color:#EECDA3;
+}
+.birdsData{
+    display: none;;
+}
+/* .active{
+    display: block;
+} */
+.hr {
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    margin-top: 50px;
+    opacity: 0.2;
+    border-radius: 2px;
+}
+
+.footer_content {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 30px;
+}
+
+.footer_content a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+    font-weight: 600;
+}
+
+.footer_content a:hover {
+    text-decoration: underline;
+}

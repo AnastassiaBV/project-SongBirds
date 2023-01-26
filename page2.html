@@ -1,37 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript" src="./index.js"></script>
-    <script type="text/javascript" src="./bidrsData.js"></script> 
+
+    <script type="text/javascript" src="js/birdsData.js"></script>
+
+    <script type="text/javascript" src="js/code.js"></script>
+    <title>SongBirds</title>
+    <link rel="stylesheet" href="css/page2.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div>
-        <ul>
-            <li>
-                <a onclick=updateContent(1) href="#">Воробьиные</a>
-            </li>
-            <li>
-                <a onclick=updateContent(2) href="#">Морские</a>
-            </li>
-            <li>
-                <a onclick=updateContent(3) href="#">Соколо</a>
-            </li>
-            <li>
-                <a onclick=updateContent(4) href="#">Вороны</a>
-            </li>
-        </ul>
+    <div class="container">
+        <header>
+            <div class="top-panel">
+                <h1> SongBirds</h1>
+                <div>
+                    <ul>
+                        <li>
+                            <a onclick="updateContent(1)" href="#">Воробьиные</a>
+                        </li>
+                        <li>
+                            <a onclick="updateContent(2)" href="#">Морские</a>
+                        </li>
+                        <li>
+                            <a onclick="updateContent(3)" href="#">Соколо</a>
+                        </li>
+                        <li>
+                            <a onclick="updateContent(4)" href="#">Вороны</a>
+                        </li>
+                    </ul>
 
-        <br>
-        <br>
+        
 
-        <!-- Content -->
+                    <!-- Content -->
+                    <!-- <div id="birds_content">
+                        
+                    </div> -->
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="container">
         <div id="birds_content">
-            
+
         </div>
     </div>
+
+
+    <div class="center-panel">
+        <div class="container">
+            <div class="birds_quiz">
+
+            </div>
+            <div class="birds_quiz_content">
+                <div class="birds_quiz_option"></div>
+                <div id="birds_description" class="birds_quiz_description"></div>
+            </div>
+            <div class="birds_quiz_nextLevel">
+                Next Level
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+
+            <div class="hr"></div>
+
+            <div class="footer_content">
+                <img class="logo" src="img/rs.svg">
+                <a class="rs_link" href="https://rs.school/js/">RS School</a>
+                <a class="github_link" href="https://github.com/AnastassiaBV">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>
