@@ -1,13 +1,14 @@
 const updateContent = (id) => {
     const birdsAnswers = document.querySelector(".birds_quiz_answers")
+
     birdsAnswers.innerHTML=""
 
     let listOfBirds = ""
     for(let item of birdsData[id]){
         // console.log(item.name)
-        listOfBirds += generateAnswers(item.name)
+        listOfBirds = listOfBirds + generateAnswers(item.name)
+        // console.log(listOfBirds)
     }
-    
     const ulEl = document.createElement("ul")
     ulEl.innerHTML = listOfBirds
     birdsAnswers.append(ulEl)
