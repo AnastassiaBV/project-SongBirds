@@ -1,16 +1,28 @@
 const updateContent = (id) => {
-    let listOfItems = "";
+    const birdsAnswers = document.querySelector(".birds_quiz_answers")
+    birdsAnswers.innerHTML=""
 
-    for (const item of birdsData[id]) {
-        listOfItems = listOfItems + generateItem(item);
+    let listOfBirds = ""
+    for(let item of birdsData[id]){
+        // console.log(item.name)
+        listOfBirds += generateAnswers(item.name)
     }
+    
+    const ulEl = document.createElement("ul")
+    ulEl.innerHTML = listOfBirds
+    birdsAnswers.append(ulEl)
+    // let listOfItems = "";
 
-    const documentEl = document.getElementById("birds_content");
-    console.log(documentEl)
+    // for (const item of birdsData[id]) {
+    //     listOfItems = listOfItems + generateItem(item);
+    // }
 
-    documentEl.innerHTML = `<div>${listOfItems}</div>`;
+    // const documentEl = document.getElementById("birds_content");
+    // console.log(documentEl)
 
-    console.log(listOfItems)
+    // documentEl.innerHTML = `<div>${listOfItems}</div>`;
+
+    // console.log(listOfItems)
     // const fragment = document.createDocumentFragment();
     // const pEl = document.createElement('p');
     // pEl.textContent = "TTT sdfglksdfglksnd;fgjkl";
@@ -20,14 +32,19 @@ const updateContent = (id) => {
 
     // console.log("III :: " + JSON.stringify(documentEl.innerHTML));
     // window.onload;
+    
 }
 
-const generateItem = (data) => {
+// const generateItem = (data) => {
     
-    return `<div 
-    id="${data.id}" >` + data.name + `<br>` + 
-        `<p>${data.species}</p><br>` + 
-        `<p>${data.description}</p>` + `<br>` + 
-        `<img src="${data.image}" alt="${data.name}" />` +
-        `<audio controls src="${data.audio}" type="audio/mpeg"> </audio> </div>`;
+//     return `<div 
+//     id="${data.id}" >` + data.name + `<br>` + 
+//         `<p>${data.species}</p><br>` + 
+//         `<p>${data.description}</p>` + `<br>` + 
+//         `<img src="${data.image}" alt="${data.name}" />` +
+//         `<audio controls src="${data.audio}" type="audio/mpeg"> </audio> </div>`;
+// }
+
+const generateAnswers = (birds) =>{
+    return `<li><p>${birds}</p></li>`
 }

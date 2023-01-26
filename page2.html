@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <script type="text/javascript" src="js/birdsData.js"></script>
-
     <script type="text/javascript" src="js/code.js"></script>
+    
     <title>SongBirds</title>
     <link rel="stylesheet" href="css/page2.css">
 
@@ -31,21 +30,21 @@
                 <div>
                     <ul>
                         <li>
-                            <a onclick="updateContent(1)" href="#">Воробьиные</a>
+                            <a onclick="updateContent(0)" href="#">Passerines</a>
                         </li>
                         <li>
-                            <a onclick="updateContent(2)" href="#">Морские</a>
+                            <a onclick="updateContent(1)" href="#">Forest Birds</a>
                         </li>
                         <li>
-                            <a onclick="updateContent(3)" href="#">Соколо</a>
+                            <a onclick="updateContent(2)" href="#">Songbirds</a>
                         </li>
                         <li>
-                            <a onclick="updateContent(4)" href="#">Вороны</a>
+                            <a onclick="updateContent(3)" href="#">Predator Birds</a>
                         </li>
+                        <li>
+                            <a onclick="updateContent(4)" href="#">Seabirds</a>
+                        </li>       
                     </ul>
-
-        
-
                     <!-- Content -->
                     <!-- <div id="birds_content">
                         
@@ -67,7 +66,7 @@
 
             </div>
             <div class="birds_quiz_content">
-                <div class="birds_quiz_option"></div>
+                <div class="birds_quiz_answers"></div>
                 <div id="birds_description" class="birds_quiz_description"></div>
             </div>
             <div class="birds_quiz_nextLevel">
@@ -87,7 +86,7 @@
             </div>
         </div>
     </footer>
-
+    
 </body>
 
 </html>

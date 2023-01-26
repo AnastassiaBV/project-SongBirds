@@ -1,4 +1,4 @@
-html {
+эфhtml {
     height: 100%;
 }
 
@@ -92,7 +92,7 @@ header {
     margin-bottom: 30px;
 }
 
-.birds_quiz_option,
+.birds_quiz_answers,
 .birds_quiz_description {
     width: 48%;
     height: 300px;
@@ -105,6 +105,18 @@ header {
         rgba(0, 0, 0, 0) 0px 0px 0px,
         rgba(0, 0, 0, 0.09) 0px 8px 16px;
     border-radius: 4px;
+}
+.birds_quiz_answers ul{
+    margin: 0;
+}
+.birds_quiz_answers ul li{
+    height: 50px;
+    font-size: 18px;
+}
+.birds_quiz_answers ul p{
+    
+    padding-top:16px;
+    
 }
 .birds_quiz_nextLevel{
     width: 100%;
