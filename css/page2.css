@@ -106,36 +106,48 @@ header {
         rgba(0, 0, 0, 0.09) 0px 8px 16px;
     border-radius: 4px;
 }
-.birds_quiz_answers ul{
+
+.birds_quiz_answers ul {
     margin: 0;
+    /* list-style-position: inside; */
+
 }
-.birds_quiz_answers ul li{
+
+.birds_quiz_answers ul li {
+   
     height: 50px;
     font-size: 18px;
-}
-.birds_quiz_answers ul p{
     
-    padding-top:16px;
-    
+
 }
-.birds_quiz_nextLevel{
+
+.birds_quiz_answers ul p {
+    padding-top: 16px;
+
+}
+
+.birds_quiz_nextLevel {
     width: 100%;
     padding: 10px 0;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.01) 0px 10px 34px 0px inset,
-    rgba(0, 0, 0, 0.05) 0px 3px 26px 0px inset,
-    rgba(0, 0, 0, 0.04) 0px 10px 40px 0px inset,
-    rgba(0, 0, 0, 0.2) 0px 0px 1px,
-    rgba(0, 0, 0, 0.01) 0px 4px 2px,
-    rgba(0, 0, 0, 0) 0px -2px 0px,
-    rgba(0, 0, 0, 0) 0px 0px 0px,
-    rgba(0, 0, 0, 0.09) 0px 8px 16px;
-border-radius: 4px;
-color:#EECDA3;
+        rgba(0, 0, 0, 0.05) 0px 3px 26px 0px inset,
+        rgba(0, 0, 0, 0.04) 0px 10px 40px 0px inset,
+        rgba(0, 0, 0, 0.2) 0px 0px 1px,
+        rgba(0, 0, 0, 0.01) 0px 4px 2px,
+        rgba(0, 0, 0, 0) 0px -2px 0px,
+        rgba(0, 0, 0, 0) 0px 0px 0px,
+        rgba(0, 0, 0, 0.09) 0px 8px 16px;
+    border-radius: 4px;
+    color: #EECDA3;
+    cursor: pointer;
 }
-.birdsData{
-    display: none;;
+
+.birdsData {
+    display: none;
+    ;
 }
+
 /* .active{
     display: block;
 } */
