@@ -20,7 +20,8 @@ const updateContent = (id) => {
     }
     
     let n = createRandomNumber(birdsData[id].length)
-    console.log(birdsData[id][n])
+    // console.log(birdsData[id][n])
+    document.querySelector(".birds_quiz").appendChild(_createQuetion(birdsData[id][n]))
     // let randElement = ""
     // function arrayRandElement(arr){
     //     var rand = Math.floor (Math.random()* arr.length);
@@ -69,5 +70,18 @@ const generateAnswers = (birds) => {
     return `<li><p>${birds}</p></li>`
 }
 
-const generateQuestions = (bird) => {
-   
+// const generateQuestions = (bird) => {
+    let _createQuetion = (bird)=>{
+        let quetion = document.createElement("div")
+        quetion.classList.add("quetion_block")
+        quetion.insertAdjacentHTML("afterbegin",`
+            <img src="${bird.image}" alt="">
+            <div class="quetion_content">
+                <h2 class="quetion_bird_name">${bird.name}</h2>
+                <hr>
+                <div class="audio"></div>
+            </div>
+        `)
+        return quetion
+    }
+ 
