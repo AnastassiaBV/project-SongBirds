@@ -75,7 +75,7 @@ const generateAnswers = (birds) => {
         let quetion = document.createElement("div")
         quetion.classList.add("quetion_block")
         quetion.insertAdjacentHTML("afterbegin",`
-            <img src="${bird.image}" alt="">
+            <img src="${bird.image}" class="question_img" alt="">
             <div class="quetion_content">
                 <h2 class="quetion_bird_name">${bird.name}</h2>
                 <hr>

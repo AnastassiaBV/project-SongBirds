@@ -86,6 +86,26 @@ header {
     margin-bottom: 30px;
 }
 
+/* .quetion_content { */
+    /* margin: 0;
+    width: 500%;
+    height: 
+} */
+
+.question_img{
+    width: auto;
+    height: 100px;
+    /* object-fit: cover; */
+}
+
+.quetion_content h2{
+    font-size: 18px;
+}
+
+.audio {
+
+}
+
 .birds_quiz_content {
     display: flex;
     justify-content: space-between;
