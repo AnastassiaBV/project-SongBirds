@@ -14,10 +14,7 @@ body {
     line-height: 1.1;
 }
 
-h1,
-h2,
-h3,
-p {
+h1,h2,h3,h4,h5,p {
     margin: 0;
     padding: 0;
 }
@@ -86,25 +83,19 @@ header {
     margin-bottom: 30px;
 }
 
-/* .quetion_content { */
-    /* margin: 0;
-    width: 500%;
-    height: 
-} */
 
-.question_img{
+
+.question_img {
     width: auto;
     height: 100px;
-    /* object-fit: cover; */
+
 }
 
-.quetion_content h2{
+.quetion_content h2 {
     font-size: 18px;
 }
 
-.audio {
 
-}
 
 .birds_quiz_content {
     display: flex;
@@ -129,22 +120,63 @@ header {
 
 .birds_quiz_answers ul {
     margin: 0;
-    /* list-style-position: inside; */
-
 }
 
 .birds_quiz_answers ul li {
-   
     height: 50px;
     font-size: 18px;
-    
-
 }
 
-.birds_quiz_answers ul p {
+.birds_quiz_answers ul .bird_name {
     padding-top: 16px;
+    cursor: pointer;
+}
+
+
+/*BIRDS_DESCRIPTION*/
+
+
+.bird_description_inner{
+    padding: 15px;
 
 }
+.bird_description_inner .bird_item{
+    display:flex;
+    margin-bottom: 15px;
+    
+}
+.bird_description_info{
+    margin-left: 10px;
+}
+.bird_description_info h4{
+    font-style: 18px;
+    /* margin-bottom: 20px; */
+}
+.bird_description_info hr{
+    margin-bottom: 10px;
+}
+.bird_description_info audio{
+    height: auto;
+    width: 99%;
+    margin-top: 50px;
+}
+.bird_description_img{
+    height: 160px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.bird_description_inner hr{
+    width: 100%;
+}
+
+.bird_description_text{
+    font-size:18px;
+    font-weight: 500;
+}
+
+/*BUTTON_NEXT_LEVEL*/
+
 
 .birds_quiz_nextLevel {
     width: 100%;
@@ -165,12 +197,12 @@ header {
 
 .birdsData {
     display: none;
-    ;
 }
 
-/* .active{
-    display: block;
-} */
+
+
+/*FOOTER*/
+
 .hr {
     height: 2px;
     width: 100%;
@@ -200,4 +232,10 @@ header {
 
 .footer_content a:hover {
     text-decoration: underline;
+}
+
+/* QUETION_BLOCK */
+
+.quetion_block {
+    
 }

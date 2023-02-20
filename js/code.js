@@ -1,37 +1,47 @@
 const updateContent = (id) => {
-    const birdsAnswers = document.querySelector(".birds_quiz_answers")
 
+    // CREATE_QUESTION
+    let birdsQuiz = document.querySelector(".birds_quiz")
+    birdsQuiz.innerHTML = ""
+
+    let createRandomNumber = number => {
+        let rend = Math.floor(Math.random() * number)
+        return rend
+    }
+
+    let randomBird = createRandomNumber(birdsData[id].length)
+    birdsQuiz.appendChild(createQuetion(birdsData[id][randomBird]))
+
+
+    //CREATE_ANSWERS
+
+    const birdsAnswers = document.getElementById("birds_quiz_answers")
     birdsAnswers.innerHTML = ""
-
     let listOfBirds = ""
     for (let item of birdsData[id]) {
-        // console.log(item.name)
         listOfBirds = listOfBirds + generateAnswers(item.name)
-        // console.log(listOfBirds)
     }
 
     const ulEl = document.createElement("ul")
     ulEl.innerHTML = listOfBirds
     birdsAnswers.append(ulEl)
 
-    let createRandomNumber = number => {
-        let rend = Math.floor(Math.random() * number)
-        return rend
+    //CREATE_DESCRIPTION
+
+    const birdsDescription = document.getElementById("birds_description")
+    const birdsItem = ulEl.querySelectorAll(".bird_name")
+    for(let bird of birdsItem){
+        bird.addEventListener("click", () => {
+            birdsDescription.innerHTML = ""
+            let birdDes = birdsData[id].find(item=>{
+                return item.name == bird.innerHTML
+            })
+            console.log(birdDes)
+            birdsDescription.appendChild(createDescription(birdDes))
+        })
     }
     
-    let n = createRandomNumber(birdsData[id].length)
-    // console.log(birdsData[id][n])
-    document.querySelector(".birds_quiz").appendChild(_createQuetion(birdsData[id][n]))
-    // let randElement = ""
-    // function arrayRandElement(arr){
-    //     var rand = Math.floor (Math.random()* arr.length);
-    //     return arr[rand];
-    // }
-    // alert (arrayRandElement (Arr));
-    // for (let item of birdsData[id]) {
-       
-
-
+    
     // let listOfItems = "";                
 
     // for (const item of birdsData[id]) {
@@ -67,21 +77,38 @@ const updateContent = (id) => {
 // }
 
 const generateAnswers = (birds) => {
-    return `<li><p>${birds}</p></li>`
+    return `<li><p id=${birds.id}" class="bird_name">${birds}</p></li>`
 }
 
-// const generateQuestions = (bird) => {
-    let _createQuetion = (bird)=>{
-        let quetion = document.createElement("div")
-        quetion.classList.add("quetion_block")
-        quetion.insertAdjacentHTML("afterbegin",`
+let createQuetion = (bird) => {
+    let question = document.createElement("div")
+    question.classList.add("quetion_block")
+    question.insertAdjacentHTML("afterbegin", `
             <img src="${bird.image}" class="question_img" alt="">
             <div class="quetion_content">
                 <h2 class="quetion_bird_name">${bird.name}</h2>
                 <hr>
-                <div class="audio"></div>
+                <audio controls src="${bird.audio}" type="audio/mpeg"> </audio> </div>
             </div>
         `)
-        return quetion
-    }
- 
+    return question
+}
+
+const createDescription=(bird)=>{
+    let description = document.createElement("div")
+    description.classList.add("bird_description_inner")
+    description.insertAdjacentHTML("afterbegin", `
+            <div class="bird_item">
+                <img src="${bird.image}" class="bird_description_img" alt="">
+                <div class="bird_description_info">
+                    <h4>${bird.name}</h4>
+                    <hr>
+                    <h5>${bird.species}</h4>
+                    <hr>
+                    <audio controls src="${bird.audio}" type="audio/mpeg"> </audio> </div>
+                </div>
+            </div>
+            <h4 class="bird_description_text">${bird.description}</h5>
+        `)
+    return description
+}
