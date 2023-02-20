@@ -1,4 +1,4 @@
-эфhtml {
+html {
     height: 100%;
 }
 
@@ -14,7 +14,12 @@ body {
     line-height: 1.1;
 }
 
-h1,h2,h3,h4,h5,p {
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
     margin: 0;
     padding: 0;
 }
@@ -83,19 +88,45 @@ header {
     margin-bottom: 30px;
 }
 
+/* QUETION_BLOCK */
 
+.quetion_content {
+    margin-left: 70px;
+    width: 100%;
+    margin-top: 20px;
+}
 
 .question_img {
     width: auto;
-    height: 100px;
-
+    height: 160px;
+    border-radius: 10px;
 }
 
 .quetion_content h2 {
     font-size: 18px;
+
 }
 
+.quetion_block {
+    padding: 15px;
+    display: flex;
+}
 
+.quetion_block audio {
+    height: auto;
+    width: 99%;
+
+}
+
+.quetion_block hr {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    background-color: #000;
+    height: 1.2px;
+    border: none
+}
+
+/* BIRDS_QUIZ */
 
 .birds_quiz_content {
     display: flex;
@@ -125,53 +156,76 @@ header {
 .birds_quiz_answers ul li {
     height: 50px;
     font-size: 18px;
+    list-style-type: none;
+    cursor: pointer;
+
+}
+ .bird_name {
+    display: flex;
+    padding-top: 16px;
+    align-items: center;
 }
 
-.birds_quiz_answers ul .bird_name {
-    padding-top: 16px;
-    cursor: pointer;
+ .circle_answer {
+
+    height: 10px;
+    width: 10px;
+    margin-right: 15px;
+    border-radius: 50%;
+    border: 1px solid #000;
 }
+
+
 
 
 /*BIRDS_DESCRIPTION*/
 
 
-.bird_description_inner{
+.bird_description_inner {
     padding: 15px;
 
 }
-.bird_description_inner .bird_item{
-    display:flex;
+
+.bird_description_inner .bird_item {
+    display: flex;
     margin-bottom: 15px;
-    
+
 }
-.bird_description_info{
+
+.bird_description_info {
     margin-left: 10px;
 }
-.bird_description_info h4{
+
+.bird_description_info h4 {
     font-style: 18px;
     /* margin-bottom: 20px; */
 }
-.bird_description_info hr{
+
+.bird_description_info hr {
     margin-bottom: 10px;
 }
-.bird_description_info audio{
+
+.bird_description_info audio {
     height: auto;
     width: 99%;
     margin-top: 50px;
 }
-.bird_description_img{
+
+.bird_description_img {
     height: 160px;
     width: auto;
     border-radius: 10px;
 }
 
-.bird_description_inner hr{
+.bird_description_inner hr {
     width: 100%;
+    background-color: #000;
+    height: 1px;
+    border: none;
 }
 
-.bird_description_text{
-    font-size:18px;
+.bird_description_text {
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -232,10 +286,4 @@ header {
 
 .footer_content a:hover {
     text-decoration: underline;
-}
-
-/* QUETION_BLOCK */
-
-.quetion_block {
-    
 }

@@ -9,8 +9,9 @@ const updateContent = (id) => {
         return rend
     }
 
-    let randomBird = createRandomNumber(birdsData[id].length)
-    birdsQuiz.appendChild(createQuetion(birdsData[id][randomBird]))
+    let randomBirdIndex = createRandomNumber(birdsData[id].length)
+    console.log(randomBirdIndex)
+    birdsQuiz.appendChild(createQuetion(birdsData[id][randomBirdIndex]))
 
 
     //CREATE_ANSWERS
@@ -30,18 +31,36 @@ const updateContent = (id) => {
 
     const birdsDescription = document.getElementById("birds_description")
     const birdsItem = ulEl.querySelectorAll(".bird_name")
-    for(let bird of birdsItem){
-        bird.addEventListener("click", () => {
-            birdsDescription.innerHTML = ""
-            let birdDes = birdsData[id].find(item=>{
-                return item.name == bird.innerHTML
+
+    for (let bird of birdsItem) {
+            bird.addEventListener("click", () => {
+                console.log(bird)
+                const birdName = bird.querySelector(".name")
+                console.log("birdName: ", birdName)
+
+                birdsDescription.innerHTML = ""
+                let birdDes = birdsData[id].find(item => {
+                    return item.name == birdName.innerHTML
+                })
+
+                let circle_answer = bird.querySelector(".circle_answer")
+
+                if (birdDes.id == randomBirdIndex + 1) {
+                    circle_answer.style.background = "green"
+                } else {
+                    circle_answer.style.background = "red"
+                }
+                console.log(birdDes)
+                birdsDescription.appendChild(createDescription(birdDes))
             })
-            console.log(birdDes)
-            birdsDescription.appendChild(createDescription(birdDes))
-        })
+        
     }
-    
-    
+
+
+
+
+
+
     // let listOfItems = "";                
 
     // for (const item of birdsData[id]) {
@@ -77,7 +96,12 @@ const updateContent = (id) => {
 // }
 
 const generateAnswers = (birds) => {
-    return `<li><p id=${birds.id}" class="bird_name">${birds}</p></li>`
+    return `<li id="">
+        <div class="bird_name">
+            <div class="circle_answer"></div>
+            <div class="name">${birds}</div>
+        </div>
+        </li>`
 }
 
 let createQuetion = (bird) => {
@@ -94,7 +118,7 @@ let createQuetion = (bird) => {
     return question
 }
 
-const createDescription=(bird)=>{
+const createDescription = (bird) => {
     let description = document.createElement("div")
     description.classList.add("bird_description_inner")
     description.insertAdjacentHTML("afterbegin", `
