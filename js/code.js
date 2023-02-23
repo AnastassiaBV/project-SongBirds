@@ -1,18 +1,8 @@
 const updateContent = (id) => {
-
-    // CREATE_QUESTION
-    let birdsQuiz = document.querySelector(".birds_quiz")
-    birdsQuiz.innerHTML = ""
-
-    let createRandomNumber = number => {
-        let rend = Math.floor(Math.random() * number)
-        return rend
-    }
-
-    let randomBirdIndex = createRandomNumber(birdsData[id].length)
-    console.log(randomBirdIndex)
-    birdsQuiz.appendChild(createQuetion(birdsData[id][randomBirdIndex]))
-
+    
+    const birdQuestion = document.querySelector(".birds_quiz")
+    let randBird = birdsData[id][randBirdNumber(birdsData[id])]
+    birdQuestion.appendChild(createQuestion(randBird))
 
     //CREATE_ANSWERS
 
@@ -39,10 +29,14 @@ const updateContent = (id) => {
                 console.log("birdName: ", birdName)
 
                 birdsDescription.innerHTML = ""
+                
+
                 let birdDes = birdsData[id].find(item => {
                     return item.name == birdName.innerHTML
                 })
 
+                console.log(birdDes)
+                birdsDescription.appendChild(createDescription(birdDes))
                 let circle_answer = bird.querySelector(".circle_answer")
 
                 if (birdDes.id == randomBirdIndex + 1) {
@@ -50,16 +44,9 @@ const updateContent = (id) => {
                 } else {
                     circle_answer.style.background = "red"
                 }
-                console.log(birdDes)
-                birdsDescription.appendChild(createDescription(birdDes))
             })
         
     }
-
-
-
-
-
 
     // let listOfItems = "";                
 
@@ -85,15 +72,11 @@ const updateContent = (id) => {
 
 }
 
-// const generateItem = (data) => {
 
-//     return `<div 
-//     id="${data.id}" >` + data.name + `<br>` + 
-//         `<p>${data.species}</p><br>` + 
-//         `<p>${data.description}</p>` + `<br>` + 
-//         `<img src="${data.image}" alt="${data.name}" />` +
-//         `<audio controls src="${data.audio}" type="audio/mpeg"> </audio> </div>`;
-// }
+function randBirdNumber(birds){
+    let rand = Math.floor(Math.random()*birds.length)
+    return rand
+}
 
 const generateAnswers = (birds) => {
     return `<li id="">
@@ -104,19 +87,20 @@ const generateAnswers = (birds) => {
         </li>`
 }
 
-let createQuetion = (bird) => {
-    let question = document.createElement("div")
-    question.classList.add("quetion_block")
-    question.insertAdjacentHTML("afterbegin", `
-            <img src="${bird.image}" class="question_img" alt="">
-            <div class="quetion_content">
-                <h2 class="quetion_bird_name">${bird.name}</h2>
-                <hr>
-                <audio controls src="${bird.audio}" type="audio/mpeg"> </audio> </div>
-            </div>
-        `)
+const createQuestion = (bird)=>{
+    const question  = document.createElement("div")
+    question.classList.add("question_block")
+    question.insertAdjacentHTML("afterbegin",`
+                <img src="${bird.image}" class="question_img" alt="">
+                <div class="question_content">
+                     <h2 class="question_bird_name">${bird.name}</h2>
+                     <hr>
+                     <audio controls src="${bird.audio}" type="audio/mpeg"> </audio> </div>
+                 </div>
+    `)
     return question
 }
+
 
 const createDescription = (bird) => {
     let description = document.createElement("div")

@@ -90,7 +90,7 @@ header {
 
 /* QUETION_BLOCK */
 
-.quetion_content {
+.question_content {
     margin-left: 70px;
     width: 100%;
     margin-top: 20px;
@@ -102,23 +102,23 @@ header {
     border-radius: 10px;
 }
 
-.quetion_content h2 {
+.question_content h2 {
     font-size: 18px;
 
 }
 
-.quetion_block {
+.question_block {
     padding: 15px;
     display: flex;
 }
 
-.quetion_block audio {
+.question_block audio {
     height: auto;
     width: 99%;
 
 }
 
-.quetion_block hr {
+.question_block hr {
     margin-top: 30px;
     margin-bottom: 15px;
     background-color: #000;
