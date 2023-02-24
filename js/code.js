@@ -1,8 +1,10 @@
 const updateContent = (id) => {
     
     const birdQuestion = document.querySelector(".birds_quiz")
-    let randBird = birdsData[id][randBirdNumber(birdsData[id])]
-    birdQuestion.appendChild(createQuestion(randBird))
+
+    let randomBirdIndex = randBirdNumber(birdsData[id])
+    let randomBird = birdsData[id][randomBirdIndex]
+    birdQuestion.appendChild(createQuestion(randomBird))
 
     //CREATE_ANSWERS
 
@@ -24,7 +26,7 @@ const updateContent = (id) => {
 
     for (let bird of birdsItem) {
             bird.addEventListener("click", () => {
-                console.log(bird)
+                // console.log(bird)
                 const birdName = bird.querySelector(".name")
                 console.log("birdName: ", birdName)
 
@@ -35,14 +37,20 @@ const updateContent = (id) => {
                     return item.name == birdName.innerHTML
                 })
 
-                console.log(birdDes)
+                // console.log(birdDes, randomBirdIndex)
                 birdsDescription.appendChild(createDescription(birdDes))
+
+
                 let circle_answer = bird.querySelector(".circle_answer")
 
-                if (birdDes.id == randomBirdIndex + 1) {
-                    circle_answer.style.background = "green"
+                if (birdDes.id == randomBirdIndex+1) {
+                    circle_answer.style.background = "forestgreen"
+                    circle_answer.style.border = "none"
+
                 } else {
-                    circle_answer.style.background = "red"
+                    circle_answer.style.background = "crimson"
+                    circle_answer.style.border = "none"
+
                 }
             })
         
